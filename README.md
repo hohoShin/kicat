@@ -9,7 +9,6 @@ kicat-django0601/
 ├── app/                     # Your Django application code
 ├── portainer-setup/         # Portainer deployment configurations
 │   ├── proxy-stack/         # Global nginx-proxy stack (deploy once)
-│   ├── site1-stack/         # Template for individual sites
 ├── Dockerfile              # Production Docker image
 ├── requirements.txt        # Python dependencies
 └── docker-compose.yml     # Development environment
@@ -30,7 +29,6 @@ Access: http://localhost:8000
 
 
 ## 🔑 Key Features
-- ✅ **Multiple Domains**: site1.com, site2.com, site3.com, etc.
 - ✅ **Automatic SSL**: Let's Encrypt certificates
 - ✅ **Easy Management**: Portainer web interface
 - ✅ **Complete Isolation**: Each site has its own database and volumes
