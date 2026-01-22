@@ -1,4 +1,4 @@
-# Django Multi-Site Deployment with Portainer
+# Django Deployment with Portainer
 
 ## 🚀 Overview
 This project uses **Portainer** for easy deployment and management of multiple Django websites on a single VPS with automatic SSL certificates.
@@ -10,9 +10,6 @@ kicat-django0601/
 ├── portainer-setup/         # Portainer deployment configurations
 │   ├── proxy-stack/         # Global nginx-proxy stack (deploy once)
 │   ├── site1-stack/         # Template for individual sites
-│   ├── SETUP-INSTRUCTIONS.md
-│   ├── DEPLOYMENT-METHODS.md
-│   └── ADDING-NEW-SITES.md
 ├── Dockerfile              # Production Docker image
 ├── requirements.txt        # Python dependencies
 └── docker-compose.yml     # Development environment
