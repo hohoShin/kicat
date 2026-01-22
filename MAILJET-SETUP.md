@@ -29,8 +29,8 @@ Create a `.env` file (or set environment variables):
 ```bash
 MAILJET_API_KEY=your_mailjet_api_key_here
 MAILJET_API_SECRET=your_mailjet_api_secret_here
-DEFAULT_FROM_EMAIL=KICAT System <wowkjobs@gmail.com>
-ADMIN_EMAIL=question106@gmail.com
+DEFAULT_FROM_EMAIL=
+ADMIN_EMAIL=
 ```
 
 #### For Production (Digital Ocean + Portainer)
@@ -40,8 +40,8 @@ ADMIN_EMAIL=question106@gmail.com
 4. Add the following variables:
    - `MAILJET_API_KEY`: Your Mailjet API key
    - `MAILJET_API_SECRET`: Your Mailjet API secret
-   - `DEFAULT_FROM_EMAIL`: KICAT System <wowkjobs@gmail.com>
-   - `ADMIN_EMAIL`: question106@gmail.com
+   - `DEFAULT_FROM_EMAIL`: 
+   - `ADMIN_EMAIL`: 
 
 ### 4. Verify Sender Domain
 1. In Mailjet dashboard, go to Account Settings → Sender Domains
