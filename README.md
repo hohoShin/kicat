@@ -31,10 +31,6 @@ Access: http://localhost:8000
 2. **Deploy Sites**: Create new stacks using `portainer-setup/site1-stack/docker-compose.yml` as template
 3. **Configure DNS**: Point domains to your VPS IP
 
-## 📚 Documentation
-- **[Setup Instructions](portainer-setup/SETUP-INSTRUCTIONS.md)** - Complete setup guide
-- **[Deployment Methods](portainer-setup/DEPLOYMENT-METHODS.md)** - How to deploy your code
-- **[Adding New Sites](portainer-setup/ADDING-NEW-SITES.md)** - Scale to multiple websites
 
 ## 🔑 Key Features
 - ✅ **Multiple Domains**: site1.com, site2.com, site3.com, etc.
@@ -43,18 +39,9 @@ Access: http://localhost:8000
 - ✅ **Complete Isolation**: Each site has its own database and volumes
 - ✅ **Auto-Discovery**: nginx-proxy automatically routes traffic
 
-## 🌐 Architecture
-```
-Internet → nginx-proxy → [site1.com] → Django App 1
-                      → [site2.com] → Django App 2
-                      → [site3.com] → Django App 3
-```
 
 ## 🚀 Deployment Workflow
 1. **Push code** to Git repository
 2. **Create stack** in Portainer
 3. **Configure domain** in environment variables
 4. **Deploy** - SSL and routing handled automatically!
-
----
-**Perfect for hosting multiple client websites on a single VPS! 🎯**# Force deploy trigger Wed Jun 11 14:08:17 KST 2025
