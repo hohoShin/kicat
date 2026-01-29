@@ -147,7 +147,7 @@
         </h3>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="border p-6 hover:shadow-md transition-all">
             <div class="flex items-center mb-3">
             <i data-lucide="file-text" class="h-6 w-6 text-primary mr-2"></i>
@@ -170,6 +170,19 @@
             비즈니스 문서군, 마케팅 문서군, 기술 문서군, 국제표준 문서군, 글로벌·로컬라이징 문서군
             </p>
             <a href="{% url 'core:service_translation' %}" class="text-primary font-medium hover:underline flex items-center">
+            자세히 보기 <i data-lucide="arrow-right" class="ml-1 h-4 w-4"></i>
+            </a>
+        </div>
+
+        <div class="border p-6 hover:shadow-md transition-all">
+            <div class="flex items-center mb-3">
+            <i data-lucide="sparkles" class="h-6 w-6 text-primary mr-2"></i>
+            <h3 class="text-xl font-bold">AI 서비스</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+            리서치와 요약의 번거로움을 해결하고, 인사이트에만 집중하실 수 있도록 지원합니다.
+            </p>
+            <a href="{% url 'core:service_ai' %}" class="text-primary font-medium hover:underline flex items-center">
             자세히 보기 <i data-lucide="arrow-right" class="ml-1 h-4 w-4"></i>
             </a>
         </div>

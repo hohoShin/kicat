@@ -403,7 +403,7 @@
       <div class="mb-8 border-t border-white/20 pt-6">
         <h3 class="font-medium text-base mb-3 text-white">모 회사</h3>
         <div>
-          <a href="{% url 'core:home' %}" class="inline-block p-3 border border-white/20 rounded-sm bg-white/10 text-sm hover:bg-white/20 transition-all text-white hover:border-white/40 hover:scale-105 duration-300">
+          <a href="https://kicat.co.kr/" class="inline-block p-3 border border-white/20 rounded-sm bg-white/10 text-sm hover:bg-white/20 transition-all text-white hover:border-white/40 hover:scale-105 duration-300">
             한국통번역주식회사
           </a>
         </div>
@@ -670,10 +670,19 @@
           <div class="flex justify-center">
             <div class="w-32 h-20 bg-gray-100 flex items-center justify-center p-2">
               <img src="{% static './img/partners/korean_culture_center_logo.png' %}" alt="한국문화원" class="max-h-full max-w-full">
-            </div>
+        <div class="mt-6">
+          <a href="{% url 'core:service_others' %}" class="inline-block px-4 py-2 bg-black text-white font-medium hover:bg-black/90 transition-colors">
+            서비스 페이지로 이동
+          </a>
+        </div>
           </div>
         </div>
       </div>
+    </div>
+          </div>
+        </div>
+      </div>
+    </div>
     </section>
 
     <!-- 3. Achievements Section - Black - 실적 Carousel with images -->
@@ -1110,7 +1119,7 @@
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
-          <div class="border border-black p-6 hover:shadow-md transition-all">
+          <div class="border border-gray-200 p-6 hover:shadow-md transition-all">
             <div class="flex items-center mb-3">
               <i data-lucide="file-text" class="h-6 w-6 text-black mr-2"></i>
               <h3 class="text-xl text-black font-bold">전문 통역 서비스</h3>
@@ -1123,7 +1132,7 @@
             </button>
           </div>
 
-          <div class="border p-6 hover:shadow-md transition-all">
+          <div class="border border-gray-200 p-6 hover:shadow-md transition-all">
             <div class="flex items-center mb-3">
               <i data-lucide="globe" class="h-6 w-6 text-black mr-2"></i>
               <h3 class="text-xl text-black font-bold">문서 번역 서비스</h3>
@@ -1136,7 +1145,7 @@
             </button>
           </div>
 
-          <div class="border p-6 hover:shadow-md transition-all">
+          <div class="border border-gray-200 p-6 hover:shadow-md transition-all">
             <div class="flex items-center mb-3">
               <i data-lucide="credit-card" class="h-6 w-6 text-black mr-2"></i>
               <h3 class="text-xl text-black font-bold">선결제 시스템</h3>
@@ -1147,7 +1156,7 @@
             </button>
           </div>
 
-          <div class="border p-6 hover:shadow-md transition-all">
+          <div class="border border-gray-200 p-6 hover:shadow-md transition-all">
             <div class="flex items-center mb-3">
               <i data-lucide="bot" class="h-6 w-6 text-black mr-2"></i>
               <h3 class="text-xl text-black font-bold">AI 문서 PE 서비스</h3>
@@ -1164,10 +1173,12 @@
     <!-- Service Detail Modals -->
     <div id="interpretation-modal" class="modal fixed inset-0 z-50 flex items-center justify-center hidden">
       <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-      <div class="relative w-full max-w-lg mx-4 sm:mx-auto bg-white rounded-none shadow-xl p-5 max-h-[90vh] overflow-y-auto">
-        <button class="close-modal absolute top-3 right-3 text-black hover:text-black/80">
+      <div class="relative w-full max-w-4xl mx-4 sm:mx-auto bg-white text-gray-800 rounded-none shadow-xl h-[90vh] flex flex-col overflow-hidden">
+        <button class="close-modal absolute top-3 right-3 text-black hover:text-black/80 z-10">
           <i data-lucide="x" class="h-4 w-4"></i>
         </button>
+        <!-- Fixed Header -->
+        <div class="flex-none px-6 pt-6 pb-2">
         <h2 class="text-2xl font-bold mb-4 text-black">전문 통역 서비스</h2>
         
         <!-- Tabs -->
@@ -1184,99 +1195,166 @@
             </li>
           </ul>
         </div>
+        </div> <!-- End Fixed Header -->
+
+        <!-- Scrollable Content -->
+        <div class="flex-1 overflow-y-auto px-6 pb-6">
+          <div class="min-h-full flex flex-col justify-center">
         
         <!-- Tab Contents -->
         <div id="interpretation-service-types" class="interpretation-tab-content space-y-4">
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">동시 통역</h3>
-            <p class="text-gray-700">전문 통역사가 부스에서 발언자의 말을 실시간으로 통역하는 서비스입니다. 국제 컨퍼런스, 세미나, 대규모 문화예술 행사에 적합합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">순차 통역</h3>
-            <p class="text-gray-700">발언자가 말을 마친 후 통역사가 통역하는 방식입니다. 소규모 미팅, 기자회견, 예술가 인터뷰에 적합합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">수행 통역</h3>
-            <p class="text-gray-700">통역사가 의뢰인과 함께 이동하며 필요한 상황에서 통역을 제공합니다. 해외 예술가 방문, 전시회 투어, 문화 교류 행사에 이상적입니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">화상 통역</h3>
-            <p class="text-gray-700">온라인 플랫폼을 통해 원격으로 제공되는 통역 서비스입니다. 국제 웨비나, 온라인 컨퍼런스, 원격 미팅에 적합합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">위스퍼링 통역</h3>
-            <p class="text-gray-700">통역사가 소수의 청중에게 낮은 목소리로 통역하는 방식입니다. 소규모 전시 투어, VIP 방문, 특별 행사에 적합합니다.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-in">
+            <div class="border border-gray-200 p-5 hover:border-black transition-colors duration-300">
+              <div class="mb-3 text-black">
+                <i data-lucide="mic" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-black mb-1">동시 통역</h3>
+              <p class="text-sm text-gray-700">전문 통역사가 부스에서 발언자의 말을 실시간으로 통역하는 서비스입니다. 국제 컨퍼런스, 세미나, 대규모 문화예술 행사에 적합합니다.</p>
+            </div>
+            <div class="border border-gray-200 p-5 hover:border-black transition-colors duration-300">
+              <div class="mb-3 text-black">
+                <i data-lucide="users" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-black mb-1">순차 통역</h3>
+              <p class="text-sm text-gray-700">발언자가 말을 마친 후 통역사가 통역하는 방식입니다. 소규모 미팅, 기자회견, 예술가 인터뷰에 적합합니다.</p>
+            </div>
+            <div class="border border-gray-200 p-5 hover:border-black transition-colors duration-300">
+              <div class="mb-3 text-black">
+                <i data-lucide="user-check" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-black mb-1">수행 통역</h3>
+              <p class="text-sm text-gray-700">통역사가 의뢰인과 함께 이동하며 필요한 상황에서 통역을 제공합니다. 해외 예술가 방문, 전시회 투어, 문화 교류 행사에 이상적입니다.</p>
+            </div>
+            <div class="border border-gray-200 p-5 hover:border-black transition-colors duration-300">
+              <div class="mb-3 text-black">
+                <i data-lucide="video" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-black mb-1">화상 통역</h3>
+              <p class="text-sm text-gray-700">온라인 플랫폼을 통해 원격으로 제공되는 통역 서비스입니다. 국제 웨비나, 온라인 컨퍼런스, 원격 미팅에 적합합니다.</p>
+            </div>
+            <div class="border border-gray-200 p-5 hover:border-black transition-colors duration-300">
+              <div class="mb-3 text-black">
+                <i data-lucide="volume-1" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-black mb-1">위스퍼링 통역</h3>
+              <p class="text-sm text-gray-700">통역사가 소수의 청중에게 낮은 목소리로 통역하는 방식입니다. 소규모 전시 투어, VIP 방문, 특별 행사에 적합합니다.</p>
+            </div>
           </div>
         </div>
         
         <div id="interpretation-process" class="interpretation-tab-content space-y-4 hidden">
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">1. 상담 및 요구사항 파악</h3>
-            <p class="text-gray-700">고객의 행사 유형, 규모, 주제, 필요한 언어 조합 등을 상세히 파악합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">2. 견적 제안</h3>
-            <p class="text-gray-700">요구사항에 맞는 통역 서비스 유형과 비용을 제안합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">3. 전문 통역사 배정</h3>
-            <p class="text-gray-700">행사 주제와 언어에 전문성을 갖춘 최적의 통역사를 배정합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">4. 사전 준비</h3>
-            <p class="text-gray-700">행사 자료를 통역사에게 제공하여 충분한 사전 준비를 진행합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">5. 서비스 제공</h3>
-            <p class="text-gray-700">행사 당일 전문 통역 서비스를 제공합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">6. 사후 관리</h3>
-            <p class="text-gray-700">서비스 품질에 대한 피드백을 수집하고 향후 개선점을 파악합니다.</p>
+          <div class="space-y-6 animate-fade-in">
+            <div class="group">
+              <div class="flex items-baseline gap-3 mb-2 pb-2 border-b border-gray-200">
+                <h3 class="text-lg font-bold text-black">1. 상담 및 요구사항 파악</h3>
+              </div>
+              <p class="text-gray-700">고객의 행사 유형, 규모, 주제, 필요한 언어 조합 등을 상세히 파악합니다.</p>
+            </div>
+            <div class="group">
+              <div class="flex items-baseline gap-3 mb-2 pb-2 border-b border-gray-200">
+                <h3 class="text-lg font-bold text-black">2. 견적 제안</h3>
+              </div>
+              <p class="text-gray-700">요구사항에 맞는 통역 서비스 유형과 비용을 제안합니다.</p>
+            </div>
+            <div class="group">
+              <div class="flex items-baseline gap-3 mb-2 pb-2 border-b border-gray-200">
+                <h3 class="text-lg font-bold text-black">3. 전문 통역사 배정</h3>
+              </div>
+              <p class="text-gray-700">행사 주제와 언어에 전문성을 갖춘 최적의 통역사를 배정합니다.</p>
+            </div>
+            <div class="group">
+              <div class="flex items-baseline gap-3 mb-2 pb-2 border-b border-gray-200">
+                <h3 class="text-lg font-bold text-black">4. 사전 준비</h3>
+              </div>
+              <p class="text-gray-700">행사 자료를 통역사에게 제공하여 충분한 사전 준비를 진행합니다.</p>
+            </div>
+            <div class="group">
+              <div class="flex items-baseline gap-3 mb-2 pb-2 border-b border-gray-200">
+                <h3 class="text-lg font-bold text-black">5. 서비스 제공</h3>
+              </div>
+              <p class="text-gray-700">행사 당일 전문 통역 서비스를 제공합니다.</p>
+            </div>
+            <div class="group">
+              <div class="flex items-baseline gap-3 mb-2 pb-2 border-b border-gray-200">
+                <h3 class="text-lg font-bold text-black">6. 사후 관리</h3>
+              </div>
+              <p class="text-gray-700">서비스 품질에 대한 피드백을 수집하고 향후 개선점을 파악합니다.</p>
+            </div>
           </div>
         </div>
         
         <div id="interpretation-rates" class="interpretation-tab-content space-y-4 hidden">
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">기본 요율 안내</h3>
-            <p class="text-gray-700">통역 서비스 요율은 언어 조합, 통역 유형, 행사 성격, 소요 시간에 따라 달라집니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">동시 통역</h3>
-            <p class="text-gray-700">1일(최대 6시간) 기준: 800,000원~ (언어 조합에 따라 상이)</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">순차 통역</h3>
-            <p class="text-gray-700">1일(최대 6시간) 기준: 600,000원~ (언어 조합에 따라 상이)</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">수행 통역</h3>
-            <p class="text-gray-700">1일(최대 8시간) 기준: 500,000원~ (언어 조합에 따라 상이)</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">화상 통역</h3>
-            <p class="text-gray-700">시간당: 150,000원~ (언어 조합에 따라 상이)</p>
-          </div>
-          <div class="text-sm text-gray-500 mt-4">
-            <p>* 상기 요율은 참고용이며, 정확한 견적은 상담을 통해 제공됩니다.</p>
-            <p>* 특수 언어 및 전문 분야는 추가 요금이 발생할 수 있습니다.</p>
+          <div class="animate-fade-in">
+            <div class="mb-6">
+              <h3 class="text-xl font-bold text-black mb-4 border-l-4 border-black pl-3">기본 요율 안내</h3>
+              <p class="text-gray-700">통역 서비스 요율은 언어 조합, 통역 유형, 행사 성격, 소요 시간에 따라 달라집니다.</p>
+            </div>
+            
+            <div class="">
+              <table class="w-full border-collapse text-left text-sm">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th class="py-3 px-4 border-b-2 border-black font-bold text-black">서비스 유형</th>
+                    <th class="py-3 px-4 border-b-2 border-black font-bold text-black">기준</th>
+                    <th class="py-3 px-4 border-b-2 border-black font-bold text-black text-right">요율 (VAT 별도)</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-200">
+                  <tr>
+                    <td class="py-3 px-4 font-medium text-black">동시 통역</td>
+                    <td class="py-3 px-4 text-gray-700">1일 (최대 6시간)</td>
+                    <td class="py-3 px-4 text-gray-700 text-right">800,000원~</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-4 font-medium text-black">순차 통역</td>
+                    <td class="py-3 px-4 text-gray-700">1일 (최대 6시간)</td>
+                    <td class="py-3 px-4 text-gray-700 text-right">600,000원~</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-4 font-medium text-black">수행 통역</td>
+                    <td class="py-3 px-4 text-gray-700">1일 (최대 8시간)</td>
+                    <td class="py-3 px-4 text-gray-700 text-right">500,000원~</td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-4 font-medium text-black">화상 통역</td>
+                    <td class="py-3 px-4 text-gray-700">시간당</td>
+                    <td class="py-3 px-4 text-gray-700 text-right">150,000원~</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="mt-6 bg-gray-50 border border-gray-200 p-4 text-sm text-gray-600">
+              <p class="flex items-start gap-2 mb-1">
+                <span class="text-black font-bold mt-0.5">※</span>
+                <span>상기 요율은 참고용이며, 언어 난이도 및 전문 분야에 따라 변동될 수 있습니다.</span>
+              </p>
+              <p class="flex items-start gap-2">
+                <span class="text-black font-bold mt-0.5">※</span>
+                <span>정확한 견적은 상담을 통해 제공됩니다.</span>
+              </p>
+            </div>
           </div>
         </div>
         
         <div class="mt-6">
-          <a href="{% url 'core:service_interpretation' %}" class="inline-block px-4 py-2 bg-black text-white font-medium hover:bg-black/90 transition-colors">
+          <a href="{% url 'core:service_translation' %}" class="inline-block px-4 py-2 bg-black text-white font-medium hover:bg-black/90 transition-colors">
             서비스 페이지로 이동
           </a>
+        </div>
+          </div>
         </div>
       </div>
     </div>
 
     <div id="translation-modal" class="modal fixed inset-0 z-50 flex items-center justify-center hidden">
       <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-      <div class="relative w-full max-w-lg mx-4 sm:mx-auto bg-white rounded-none shadow-xl p-5 max-h-[90vh] overflow-y-auto">
-        <button class="close-modal absolute top-3 right-3 text-black hover:text-black/80">
+      <div class="relative w-full max-w-4xl mx-4 sm:mx-auto bg-white text-gray-800 rounded-none shadow-xl h-[90vh] flex flex-col overflow-hidden">
+        <button class="close-modal absolute top-3 right-3 text-black hover:text-black/80 z-10">
           <i data-lucide="x" class="h-4 w-4"></i>
         </button>
+        <!-- Fixed Header -->
+        <div class="flex-none px-6 pt-6 pb-2">
         <h2 class="text-2xl font-bold mb-4 text-black">문서 번역 서비스</h2>
         
         <!-- Tabs -->
@@ -1293,99 +1371,153 @@
             </li>
           </ul>
         </div>
+        </div> <!-- End Fixed Header -->
+
+        <!-- Scrollable Content -->
+        <div class="flex-1 overflow-y-auto px-6 pb-6">
+          <div class="min-h-full flex flex-col justify-center">
         
         <!-- Tab Contents -->
         <div id="translation-service-types" class="translation-tab-content space-y-4">
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">비즈니스 문서군</h3>
-            <p class="text-gray-700">계약서, 제안서, 보도자료, 연례보고서 등 비즈니스 관련 문서의 전문 번역 서비스를 제공합니다.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-in">
+            <div class="border border-gray-200 p-5 hover:border-black transition-colors duration-300">
+              <div class="mb-3 text-black">
+                <i data-lucide="briefcase" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-black mb-1">비즈니스 문서군</h3>
+              <p class="text-sm text-gray-700">계약서, 제안서, 보도자료, 연례보고서 등 비즈니스 관련 문서의 전문 번역 서비스를 제공합니다.</p>
+            </div>
+            <div class="border border-gray-200 p-5 hover:border-black transition-colors duration-300">
+              <div class="mb-3 text-black">
+                <i data-lucide="megaphone" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-black mb-1">마케팅 문서군</h3>
+              <p class="text-sm text-gray-700">브로슈어, 카탈로그, 웹사이트 콘텐츠, 소셜 미디어 게시물 등 마케팅 자료의 문화적 맥락을 고려한 번역을 제공합니다.</p>
+            </div>
+            <div class="border border-gray-200 p-5 hover:border-black transition-colors duration-300">
+              <div class="mb-3 text-black">
+                <i data-lucide="cpu" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-black mb-1">기술 문서군</h3>
+              <p class="text-sm text-gray-700">기술 사양서, 매뉴얼, 연구 보고서 등 전문 용어가 포함된 기술 문서의 정확한 번역을 제공합니다.</p>
+            </div>
+            <div class="border border-gray-200 p-5 hover:border-black transition-colors duration-300">
+              <div class="mb-3 text-black">
+                <i data-lucide="book" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-black mb-1">국제표준 문서군</h3>
+              <p class="text-sm text-gray-700">ISO 표준, 국제 규정, 인증 문서 등 국제 표준 관련 문서의 전문적인 번역을 제공합니다.</p>
+            </div>
+            <div class="border border-gray-200 p-5 hover:border-black transition-colors duration-300">
+              <div class="mb-3 text-black">
+                <i data-lucide="globe" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-black mb-1">글로벌·로컬라이징 문서군</h3>
+              <p class="text-sm text-gray-700">현지화가 필요한 콘텐츠의 문화적 맥락을 고려한 번역 및 로컬라이징 서비스를 제공합니다.</p>
+            </div>
           </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">마케팅 문서군</h3>
-            <p class="text-gray-700">브로슈어, 카탈로그, 웹사이트 콘텐츠, 소셜 미디어 게시물 등 마케팅 자료의 문화적 맥락을 고려한 번역을 제공합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">기술 문서군</h3>
-            <p class="text-gray-700">기술 사양서, 매뉴얼, 연구 보고서 등 전문 용어가 포함된 기술 문서의 정확한 번역을 제공합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">국제표준 문서군</h3>
-            <p class="text-gray-700">ISO 표준, 국제 규정, 인증 문서 등 국제 표준 관련 문서의 전문적인 번역을 제공합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">글로벌·로컬라이징 문서군</h3>
-            <p class="text-gray-700">현지화가 필요한 콘텐츠의 문화적 맥락을 고려한 번역 및 로컬라이징 서비스를 제공합니다.</p>
-          </div>
-        </div>
-        
-        <div id="translation-process" class="translation-tab-content space-y-4 hidden">
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">1. 문서 접수 및 분석</h3>
-            <p class="text-gray-700">번역할 문서를 접수하고 내용, 분량, 전문성 수준을 분석합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">2. 견적 및 일정 제안</h3>
-            <p class="text-gray-700">문서 분석 결과에 따라 정확한 견적과 납기일을 제안합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">3. 전문 번역사 배정</h3>
-            <p class="text-gray-700">문서 주제와 언어에 전문성을 갖춘 번역사를 배정합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">4. 번역 작업</h3>
-            <p class="text-gray-700">전문 번역사가 원문의 의미와 맥락을 정확히 전달하는 번역을 진행합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">5. 교정 및 검수</h3>
-            <p class="text-gray-700">전문 감수자가 번역물을 검토하고 품질을 확인합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">6. 최종 납품</h3>
-            <p class="text-gray-700">검수가 완료된 번역물을 고객이 요청한 형식으로 납품합니다.</p>
-          </div>
-        </div>
-        
-        <div id="translation-rates" class="translation-tab-content space-y-4 hidden">
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">기본 요율 안내</h3>
-            <p class="text-gray-700">번역 요율은 언어 조합, 문서 유형, 전문성 수준, 납기일에 따라 달라집니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">일반 문서</h3>
-            <p class="text-gray-700">영한/한영: 원문 1단어당 220원~ / 국문 1자당 200원~</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">전문 문서</h3>
-            <p class="text-gray-700">영한/한영: 원문 1단어당 220원~ / 국문 1자당 200원~</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">고난이도 전문 문서</h3>
-            <p class="text-gray-700">영한/한영: 원문 1단어당 240원~ / 국문 1자당 220원~</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">기타 언어</h3>
-            <p class="text-gray-700">일본어, 중국어, 유럽어, 기타 언어는 별도 견적 제공</p>
-          </div>
-          <div class="text-sm text-gray-500 mt-4">
-            <p>* 상기 요율은 참고용이며, 정확한 견적은 문서 검토 후 제공됩니다.</p>
-            <p>* 긴급 번역, 주말 번역은 추가 요금이 발생할 수 있습니다.</p>
-          </div>
-        </div>
-        
         <div class="mt-6">
-          <a href="{% url 'core:service_translation' %}" class="inline-block px-4 py-2 bg-black text-white font-medium hover:bg-black/90 transition-colors">
-            서비스 페이지로 이동
-          </a>
+           <a href="#contact" class="inline-block px-4 py-2 bg-black text-white font-medium hover:bg-black/90 transition-colors close-modal">
+             견적 요청하기
+           </a>
+        </div>
+        </div>
+
+        <div id="translation-process" class="translation-tab-content space-y-4 hidden">
+           <div class="space-y-6 animate-fade-in">
+             <div class="group">
+               <div class="flex items-baseline gap-3 mb-2 pb-2 border-b border-gray-200">
+                 <h3 class="text-lg font-bold text-black">1. 견적 의뢰</h3>
+               </div>
+               <p class="text-gray-700">문서의 분량, 난이도, 납기일 등을 검토하여 견적을 산출합니다.</p>
+             </div>
+             <div class="group">
+               <div class="flex items-baseline gap-3 mb-2 pb-2 border-b border-gray-200">
+                 <h3 class="text-lg font-bold text-black">2. 번역 진행</h3>
+               </div>
+               <p class="text-gray-700">해당 분야의 전문 번역사가 번역을 진행합니다.</p>
+             </div>
+             <div class="group">
+               <div class="flex items-baseline gap-3 mb-2 pb-2 border-b border-gray-200">
+                 <h3 class="text-lg font-bold text-black">3. 감수 및 교정</h3>
+               </div>
+               <p class="text-gray-700">원어민 에디터와 전문 감수자가 품질을 검토합니다.</p>
+             </div>
+             <div class="group">
+               <div class="flex items-baseline gap-3 mb-2 pb-2 border-b border-gray-200">
+                 <h3 class="text-lg font-bold text-black">4. 납품</h3>
+               </div>
+               <p class="text-gray-700">최종 완료된 번역물을 고객에게 전달합니다.</p>
+             </div>
+           </div>
+        </div>
+
+        <div id="translation-rates" class="translation-tab-content space-y-4 hidden">
+           <div class="animate-fade-in">
+                <div class="">
+                  <table class="w-full border-collapse text-left text-sm">
+                    <thead class="bg-gray-50">
+                      <tr>
+                        <th class="py-3 px-4 border-b-2 border-black font-bold text-black">문서 유형</th>
+                        <th class="py-3 px-4 border-b-2 border-black font-bold text-black">기준</th>
+                        <th class="py-3 px-4 border-b-2 border-black font-bold text-black text-right">요율 (VAT 별도)</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                      <tr>
+                        <td class="py-3 px-4 font-medium text-black">일반 문서</td>
+                        <td class="py-3 px-4 text-gray-700">영한/한영 (원문 1단어)</td>
+                        <td class="py-3 px-4 text-gray-700 text-right">220원~</td>
+                      </tr>
+                      <tr>
+                        <td class="py-3 px-4 font-medium text-black">전문 문서</td>
+                        <td class="py-3 px-4 text-gray-700">영한/한영 (원문 1단어)</td>
+                        <td class="py-3 px-4 text-gray-700 text-right">220원~</td>
+                      </tr>
+                      <tr>
+                        <td class="py-3 px-4 font-medium text-black">고난이도 전문 문서</td>
+                        <td class="py-3 px-4 text-gray-700">영한/한영 (원문 1단어)</td>
+                        <td class="py-3 px-4 text-gray-700 text-right">240원~</td>
+                      </tr>
+                      <tr>
+                        <td class="py-3 px-4 font-medium text-black">기타 언어</td>
+                        <td class="py-3 px-4 text-gray-700">일본어, 중국어, 유럽어 등</td>
+                        <td class="py-3 px-4 text-gray-700 text-right">별도 견적</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="mt-6 bg-gray-50 border border-gray-200 p-4 text-sm text-gray-600">
+                  <p class="flex items-start gap-2 mb-1">
+                    <span class="text-black font-bold mt-0.5">※</span>
+                    <span>상기 요율은 참고용이며, 긴급 번역이나 주말 작업 시 추가 요금이 발생할 수 있습니다.</span>
+                  </p>
+                  <p class="flex items-start gap-2">
+                    <span class="text-black font-bold mt-0.5">※</span>
+                    <span>정확한 견적은 문서 검토 후 제공됩니다.</span>
+                  </p>
+                </div>
+
+                <div class="mt-6">
+                   <a href="#contact" class="inline-block px-4 py-2 bg-black text-white font-medium hover:bg-black/90 transition-colors close-modal">
+                     견적 요청하기
+                   </a>
+                </div>
+          </div>
         </div>
       </div>
     </div>
-
+    </div>
+    </div>
     <div id="pointplus-modal" class="modal fixed inset-0 z-50 flex items-center justify-center hidden">
       <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-      <div class="relative w-full max-w-lg mx-4 sm:mx-auto bg-white rounded-none shadow-xl p-5 max-h-[90vh] overflow-y-auto">
-        <button class="close-modal absolute top-3 right-3 text-black hover:text-black/80">
+      <div class="relative w-full max-w-4xl mx-4 sm:mx-auto bg-white text-gray-800 rounded-none shadow-xl h-[90vh] flex flex-col overflow-hidden">
+        <button class="close-modal absolute top-3 right-3 text-black hover:text-black/80 z-10">
           <i data-lucide="x" class="h-4 w-4"></i>
         </button>
+        <!-- Fixed Header -->
+        <div class="flex-none px-6 pt-6 pb-2">
         <h2 class="text-2xl font-bold mb-4 text-black">선결제 시스템</h2>
         
         <!-- Tabs -->
@@ -1397,105 +1529,209 @@
             <li class="mr-2">
               <button class="pointplus-tab inline-block p-4 border-b-2 border-transparent text-gray-700 hover:border-gray-300 hover:text-gray-600" data-tab="process">진행 절차</button>
             </li>
-            <!--<li>
+            <li>
               <button class="pointplus-tab inline-block p-4 border-b-2 border-transparent text-gray-700 hover:border-gray-300 hover:text-gray-600" data-tab="rates">서비스 요율</button>
-            </li> -->
+            </li>
           </ul>
         </div>
+        </div> <!-- End Fixed Header -->
+
+        <!-- Scrollable Content -->
+        <div class="flex-1 overflow-y-auto px-6 pb-6">
+          <div class="min-h-full flex flex-col justify-center">
         
         <!-- Tab Contents -->
         <div id="pointplus-service-types" class="pointplus-tab-content space-y-4">
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">시간 절약</h3>
-            <p class="text-gray-700">매번 견적을 요청하고 결제하는 과정을 생략하여 번역 의뢰 시간을 단축합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">간편한 사용</h3>
-            <p class="text-gray-700">계정에 포인트를 충전해두고 필요할 때마다 간편하게 번역 서비스를 이용할 수 있습니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">비용 효율성</h3>
-            <p class="text-gray-700">대량 구매 시 할인 혜택을 제공하여 번역 비용을 절감할 수 있습니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">투명한 사용 내역</h3>
-            <p class="text-gray-700">포인트 사용 내역과 남은 포인트를 실시간으로 확인할 수 있어 예산 관리가 용이합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">유연한 충전 옵션</h3>
-            <p class="text-gray-700">필요에 따라 다양한 금액으로 포인트를 충전할 수 있으며, 유효기간 내에 자유롭게 사용 가능합니다.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 animate-fade-in">
+            <div class="border border-gray-200 p-5 hover:border-black transition-colors duration-300">
+              <div class="mb-3 text-black">
+                <i data-lucide="clock" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-black mb-1">시간 절약</h3>
+              <p class="text-sm text-gray-700">매번 견적을 요청하고 결제하는 과정을 생략하여 번역 의뢰 시간을 단축합니다.</p>
+            </div>
+            <div class="border border-gray-200 p-5 hover:border-black transition-colors duration-300">
+              <div class="mb-3 text-black">
+                <i data-lucide="mouse-pointer" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-black mb-1">간편한 사용</h3>
+              <p class="text-sm text-gray-700">계정에 포인트를 충전해두고 필요할 때마다 간편하게 번역 서비스를 이용할 수 있습니다.</p>
+            </div>
+            <div class="border border-gray-200 p-5 hover:border-black transition-colors duration-300">
+              <div class="mb-3 text-black">
+                <i data-lucide="piggy-bank" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-black mb-1">비용 효율성</h3>
+              <p class="text-sm text-gray-700">대량 구매 시 할인 혜택을 제공하여 번역 비용을 절감할 수 있습니다.</p>
+            </div>
+            <div class="border border-gray-200 p-5 hover:border-black transition-colors duration-300">
+              <div class="mb-3 text-black">
+                <i data-lucide="list" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-black mb-1">투명한 사용 내역</h3>
+              <p class="text-sm text-gray-700">포인트 사용 내역과 남은 포인트를 실시간으로 확인할 수 있어 예산 관리가 용이합니다.</p>
+            </div>
+            <div class="border border-gray-200 p-5 hover:border-black transition-colors duration-300">
+              <div class="mb-3 text-black">
+                <i data-lucide="sliders-horizontal" class="h-6 w-6"></i>
+              </div>
+              <h3 class="font-bold text-black mb-1">유연한 충전 옵션</h3>
+              <p class="text-sm text-gray-700">필요에 따라 다양한 금액으로 포인트를 충전할 수 있으며, 유효기간 내에 자유롭게 사용 가능합니다.</p>
+            </div>
           </div>
         </div>
         
         <div id="pointplus-process" class="pointplus-tab-content space-y-4 hidden">
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">1. 회원 가입</h3>
-            <p class="text-gray-700">웹사이트에서 회원 가입을 완료합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">2. 포인트 충전</h3>
-            <p class="text-gray-700">원하는 금액만큼 포인트를 충전합니다. 충전 금액에 따라 보너스 포인트가 제공됩니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">3. 번역 의뢰</h3>
-            <p class="text-gray-700">번역이 필요한 문서를 업로드하고 필요한 서비스를 선택합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">4. 자동 견적</h3>
-            <p class="text-gray-700">시스템이 자동으로 필요한 포인트를 계산하여 표시합니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">5. 포인트 차감</h3>
-            <p class="text-gray-700">의뢰 확정 시 필요한 포인트가 자동으로 차감됩니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">6. 번역 진행 및 납품</h3>
-            <p class="text-gray-700">번역이 완료되면 이메일로 알림을 받고 마이페이지에서 다운로드할 수 있습니다.</p>
+          <div class="space-y-6 animate-fade-in">
+            <div class="group">
+              <div class="flex items-baseline gap-3 mb-2 pb-2 border-b border-gray-200">
+                <h3 class="text-lg font-bold text-black">1. 회원 가입</h3>
+              </div>
+              <p class="text-gray-700">웹사이트에서 회원 가입을 완료합니다.</p>
+            </div>
+            <div class="group">
+              <div class="flex items-baseline gap-3 mb-2 pb-2 border-b border-gray-200">
+                <h3 class="text-lg font-bold text-black">2. 포인트 충전</h3>
+              </div>
+              <p class="text-gray-700">원하는 금액만큼 포인트를 충전합니다. 충전 금액에 따라 보너스 포인트가 제공됩니다.</p>
+            </div>
+            <div class="group">
+              <div class="flex items-baseline gap-3 mb-2 pb-2 border-b border-gray-200">
+                <h3 class="text-lg font-bold text-black">3. 번역 의뢰</h3>
+              </div>
+              <p class="text-gray-700">번역이 필요한 문서를 업로드하고 필요한 서비스를 선택합니다.</p>
+            </div>
+            <div class="group">
+              <div class="flex items-baseline gap-3 mb-2 pb-2 border-b border-gray-200">
+                <h3 class="text-lg font-bold text-black">4. 자동 견적</h3>
+              </div>
+              <p class="text-gray-700">시스템이 자동으로 필요한 포인트를 계산하여 표시합니다.</p>
+            </div>
+            <div class="group">
+              <div class="flex items-baseline gap-3 mb-2 pb-2 border-b border-gray-200">
+                <h3 class="text-lg font-bold text-black">5. 포인트 차감</h3>
+              </div>
+              <p class="text-gray-700">의뢰 확정 시 필요한 포인트가 자동으로 차감됩니다.</p>
+            </div>
+            <div class="group">
+              <div class="flex items-baseline gap-3 mb-2 pb-2 border-b border-gray-200">
+                <h3 class="text-lg font-bold text-black">6. 번역 진행 및 납품</h3>
+              </div>
+              <p class="text-gray-700">번역이 완료되면 이메일로 알림을 받고 마이페이지에서 다운로드할 수 있습니다.</p>
+            </div>
           </div>
         </div>
         
         <div id="pointplus-rates" class="pointplus-tab-content space-y-4 hidden">
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">포인트 충전 요금제</h3>
-            <p class="text-gray-700">다양한 충전 옵션 중 필요에 맞는 요금제를 선택할 수 있습니다.</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">기본 충전</h3>
-            <p class="text-gray-700">10만원 = 10,000 포인트</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">실버 패키지</h3>
-            <p class="text-gray-700">30만원 = 31,500 포인트 (5% 보너스)</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">골드 패키지</h3>
-            <p class="text-gray-700">50만원 = 55,000 포인트 (10% 보너스)</p>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-black mb-2">플래티넘 패키지</h3>
-            <p class="text-gray-700">100만원 = 115,000 포인트 (15% 보너스)</p>
-          </div>
-          <div class="text-sm text-gray-500 mt-4">
-            <p>* 포인트 유효기간: 마지막 충전일로부터 1년</p>
-            <p>* 기업 고객을 위한 맞춤형 패키지도 제공 가능합니다.</p>
+          <div class="animate-fade-in">
+            <div class="mb-6">
+              <h3 class="text-xl font-bold text-black mb-4 border-l-4 border-black pl-3">포인트 충전 요금제</h3>
+              <p class="text-gray-700">다양한 충전 옵션 중 필요에 맞는 요금제를 선택할 수 있습니다.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div class="border border-gray-200 p-6 flex flex-col hover:border-black transition-colors duration-300">
+                <div class="mb-4">
+                  <h4 class="text-lg font-bold text-black">기본 충전</h4>
+                </div>
+                <div class="mb-4 flex-grow">
+                  <span class="text-3xl font-bold text-black">10만원</span>
+                </div>
+                <ul class="space-y-2 text-sm text-gray-700 mb-6">
+                  <li class="flex items-center">
+                    <i data-lucide="check" class="h-4 w-4 mr-2 text-black"></i>
+                    10,000 포인트 적립
+                  </li>
+                </ul>
+              </div>
+
+              <div class="border border-gray-200 p-6 flex flex-col hover:border-black transition-colors duration-300">
+                <div class="mb-4">
+                  <h4 class="text-lg font-bold text-black">실버 패키지</h4>
+                </div>
+                <div class="mb-4 flex-grow">
+                  <span class="text-3xl font-bold text-black">30만원</span>
+                </div>
+                <ul class="space-y-2 text-sm text-gray-700 mb-6">
+                  <li class="flex items-center">
+                    <i data-lucide="check" class="h-4 w-4 mr-2 text-black"></i>
+                    31,500 포인트 적립
+                  </li>
+                  <li class="flex items-center text-black font-medium">
+                    <i data-lucide="check" class="h-4 w-4 mr-2 text-black"></i>
+                    5% 추가 보너스
+                  </li>
+                </ul>
+              </div>
+
+              <div class="border-2 border-black p-6 flex flex-col bg-gray-50 transform md:-translate-y-2 shadow-lg">
+                <div class="mb-4 flex justify-between items-center">
+                  <h4 class="text-lg font-bold text-black">골드 패키지</h4>
+                  <span class="bg-black text-white text-xs px-2 py-1 font-bold">POPULAR</span>
+                </div>
+                <div class="mb-4 flex-grow">
+                  <span class="text-3xl font-bold text-black">50만원</span>
+                </div>
+                <ul class="space-y-2 text-sm text-gray-700 mb-6">
+                  <li class="flex items-center">
+                    <i data-lucide="check" class="h-4 w-4 mr-2 text-black"></i>
+                    55,000 포인트 적립
+                  </li>
+                  <li class="flex items-center text-black font-medium">
+                    <i data-lucide="check" class="h-4 w-4 mr-2 text-black"></i>
+                    10% 추가 보너스
+                  </li>
+                </ul>
+              </div>
+
+              <div class="border border-gray-200 p-6 flex flex-col hover:border-black transition-colors duration-300">
+                <div class="mb-4">
+                  <h4 class="text-lg font-bold text-black">플래티넘 패키지</h4>
+                </div>
+                <div class="mb-4 flex-grow">
+                  <span class="text-3xl font-bold text-black">100만원</span>
+                </div>
+                <ul class="space-y-2 text-sm text-gray-700 mb-6">
+                  <li class="flex items-center">
+                    <i data-lucide="check" class="h-4 w-4 mr-2 text-black"></i>
+                    115,000 포인트 적립
+                  </li>
+                  <li class="flex items-center text-black font-medium">
+                    <i data-lucide="check" class="h-4 w-4 mr-2 text-black"></i>
+                    15% 추가 보너스
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="mt-6 bg-gray-50 border border-gray-200 p-4 text-sm text-gray-600">
+              <p class="flex items-start gap-2 mb-1">
+                <span class="text-black font-bold mt-0.5">※</span>
+                <span>포인트 유효기간: 마지막 충전일로부터 1년</span>
+              </p>
+              <p class="flex items-start gap-2">
+                <span class="text-black font-bold mt-0.5">※</span>
+                <span>기업 고객을 위한 맞춤형 패키지도 제공 가능합니다.</span>
+              </p>
+            </div>
           </div>
         </div>
         
-        <div class="mt-6">
-          <a href="{% url 'core:service_others' %}" class="inline-block px-4 py-2 bg-black text-white font-medium hover:bg-black/90 transition-colors">
-            서비스 페이지로 이동
-          </a>
+          </div>
         </div>
       </div>
     </div>
 
+
     <!-- AI PE Service Modal -->
     <div id="aipe-modal" class="modal fixed inset-0 z-50 flex items-center justify-center hidden">
       <div class="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-      <div class="relative w-full max-w-4xl mx-4 sm:mx-auto bg-white text-gray-800 rounded-none shadow-xl p-5 max-h-[90vh] overflow-y-auto">
-        <button class="close-modal absolute top-3 right-3 text-black hover:text-black/80">
+      <div class="relative w-full max-w-4xl mx-4 sm:mx-auto bg-white text-gray-800 rounded-none shadow-xl h-[90vh] flex flex-col overflow-hidden">
+        <button class="close-modal absolute top-3 right-3 text-black hover:text-black/80 z-10">
           <i data-lucide="x" class="h-4 w-4"></i>
         </button>
+        <!-- Fixed Header -->
+        <div class="flex-none px-6 pt-6 pb-2">
         <h2 class="text-2xl font-bold mb-4 text-black">AI 문서 PE 서비스</h2>
         
         <!-- Tabs -->
@@ -1512,6 +1748,11 @@
             </li>
           </ul>
         </div>
+        </div> <!-- End Fixed Header -->
+
+        <!-- Scrollable Content -->
+        <div class="flex-1 overflow-y-auto px-6 pb-6">
+          <div class="min-h-full flex flex-col justify-center">
         
         <!-- Tab Contents -->
         <div id="aipe-service-intro" class="aipe-tab-content space-y-4">
@@ -1574,7 +1815,7 @@
         </div>
 
         <div id="aipe-service-levels" class="aipe-tab-content space-y-4 hidden">
-          <div class="overflow-x-auto animate-fade-in">
+            <div class="animate-fade-in">
             <table class="w-full border-collapse text-left text-sm">
               <thead>
                 <tr class="border-b-2 border-black">
@@ -1707,10 +1948,7 @@
           </div>
         </div>
         
-        <div class="mt-6">
-           <a href="#contact" class="inline-block px-4 py-2 bg-black text-white font-medium hover:bg-black/90 transition-colors close-modal">
-             견적 요청하기
-           </a>
+          </div>
         </div>
       </div>
     </div>
@@ -1747,7 +1985,7 @@
         // Close modal when clicking outside
         document.querySelectorAll('.modal').forEach(modal => {
           modal.addEventListener('click', function(e) {
-            if (e.target === this) {
+            if (e.target === this || e.target.classList.contains('backdrop-blur-sm')) {
               this.classList.add('hidden');
               document.body.style.overflow = '';
             }
@@ -1925,7 +2163,7 @@
           <div class="mt-4">
             <h3 class="font-medium text-base mb-2 border-b border-white/20 pb-2 text-white">모 회사</h3>
             <div>
-              <a href="{% url 'core:home' %}" class="inline-block p-2 border rounded bg-white/10 text-sm hover:bg-white/20 transition-colors text-white">
+              <a href="https://kicat.co.kr/" class="inline-block p-2 border rounded bg-white/10 text-sm hover:bg-white/20 transition-colors text-white">
                 한국통번역주식회사
               </a>
             </div>

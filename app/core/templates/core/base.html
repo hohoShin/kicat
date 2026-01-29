@@ -150,6 +150,21 @@
                         "name": "대한민국"
                     },
                     "availableLanguage": ["Korean", "English", "Japanese", "Chinese", "Spanish", "French", "German", "Russian", "Vietnamese", "Thai"]
+                },
+                {
+                    "@type": "Service",
+                    "@id": "{{ request.scheme }}://{{ request.get_host }}/#ai-service",
+                    "name": "AI 서비스",
+                    "description": "Policy Report 생성형 AI, ATPE, AI 문서 PE 서비스",
+                    "provider": {
+                        "@id": "{{ request.scheme }}://{{ request.get_host }}/#organization"
+                    },
+                    "serviceType": ["Policy Report", "ATPE", "AI 문서 PE"],
+                    "areaServed": {
+                        "@type": "Country",
+                        "name": "대한민국"
+                    },
+                    "availableLanguage": ["Korean", "English", "Japanese", "Chinese", "Spanish", "French", "German", "Russian", "Vietnamese", "Thai"]
                 }
             ]
         }
@@ -925,6 +940,17 @@
                         <a href="{% url 'core:service_translation' %}#translation-pricing" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">번역 요율</a>
                     </div>
                 </div>
+                <div class="relative group">
+                    <a href="{% url 'core:service_ai' %}" class="text-base font-medium border-primary px-2 py-1 flex items-center">
+                        AI 서비스
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 h-4 w-4"><path d="m6 9 6 6 6-6"/></svg>
+                    </a>
+                    <div class="absolute left-0 mt-1 w-48 bg-white shadow-lg rounded-sm border border-gray-100 hidden group-hover:block z-50">
+                        <a href="{% url 'core:service_ai' %}#policy-report" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Policy Report</a>
+                        <a href="{% url 'core:service_ai' %}#atpe-service" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">ATPE (AI 번역)</a>
+                        <a href="{% url 'core:service_ai' %}#ai-pe-service" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">AI 문서 PE</a>
+                    </div>
+                </div>
                 <a href="{% url 'core:service_others' %}" class="text-base font-medium text-gray-800 hover:text-primary hover:border-primary transition-all px-2 py-1">
                 기타 서비스
                 </a>
@@ -1009,6 +1035,11 @@
                 <li>
                 <a href="{% url 'core:service_translation' %}" class="block py-2 text-gray-700 hover:text-primary border-b border-gray-100">
                     번역 서비스
+                </a>
+                </li>
+                <li>
+                <a href="{% url 'core:service_ai' %}" class="block py-2 text-gray-700 hover:text-primary border-b border-gray-100">
+                    AI 서비스
                 </a>
                 </li>
                 <li>
@@ -1310,9 +1341,10 @@
             <div class="mt-4">
                 <h3 class="font-medium text-base mb-2 border-b pb-2">Family Site</h3>
                 <div>
-                <a href="{% url 'core:korea_culture_arts_translation_agency' %}" class="inline-block p-2 border rounded bg-white text-sm hover:bg-gray-50 transition-colors">
-                    한국문화예술번역원
-                </a>
+                    <!-- TODO: 운영 배포 시 도메인 주소로 변경 필요 -->
+                    <a href="http://agency.local:8000/" class="inline-block p-2 border rounded bg-white text-sm hover:bg-gray-50 transition-colors">
+                        한국문화예술번역원
+                    </a>
                 </div>
             </div>
             </div>
