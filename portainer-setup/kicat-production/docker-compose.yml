@@ -30,7 +30,7 @@ services:
       
       # Database configuration
       - DB_HOST=db
-      - DB_NAME=kicat_production-test
+      - DB_NAME=kicat_production
       - DB_USER=postgres
       - DB_PASSWORD=${DB_PASSWORD}
       
