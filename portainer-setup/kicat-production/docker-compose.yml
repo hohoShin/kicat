@@ -48,12 +48,12 @@ services:
     restart: unless-stopped
     networks:
       - proxy-network
-      - kicat-internal
+      - kicat-internal-test
 
   # PostgreSQL Database
   db:
     image: postgres:13-alpine
-    container_name: kicat-db
+    container_name: kicat-db-test
     volumes:
       - postgres-data:/var/lib/postgresql/data
     environment:
@@ -62,7 +62,7 @@ services:
       - POSTGRES_PASSWORD=${DB_PASSWORD}
     restart: unless-stopped
     networks:
-      - kicat-internal
+      - kicat-internal-test
 
 volumes:
   static-files:
@@ -72,5 +72,5 @@ volumes:
 networks:
   proxy-network:
     external: true
-  kicat-internal:
+  kicat-internal-test:
     driver: bridge 
