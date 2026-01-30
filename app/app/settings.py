@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+
 import os
 from pathlib import Path
 
@@ -158,9 +159,7 @@ MEDIA_ROOT = "/vol/web/media"
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "/static/static/"
-# Static files are now served from the core app's static directory
-# Django's AppDirectoriesFinder automatically finds static files from all installed apps
+STATIC_URL = "/static/"
 STATIC_ROOT = "/vol/web/static"
 
 # Optimize static files collection for limited memory
@@ -169,8 +168,8 @@ STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 
-# Disable static file compression to save memory
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+# Enable compression and caching for static files
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
