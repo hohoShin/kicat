@@ -1,0 +1,65 @@
+/*
+Theme Name: kicat
+Theme URI: http://kicat.co.kr
+Author: divis
+Author URI: http://divis.co.kr/
+Description: kicat - theme
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: kicat
+*/
+
+body {
+  word-break: keep-all;
+}
+@media (max-width: 767px) {
+  .p br {
+    display: none;
+  }
+}
+
+div.wpcf7-response-output {
+  margin: 0;
+  padding: 1.2em 1em;
+  border: 3px solid #262b2f;
+  background: white;
+  text-align: center;
+  font-size: 15px;
+}
+
+div.wpcf7-validation-errors,
+div.wpcf7-acceptance-missing {
+  border: 3px solid #c33c3c;
+  text-align: center;
+}
+
+div.wpcf7 .ajax-loader {
+  visibility: hidden;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: none;
+  padding: 0;
+  margin: 0 0 0 4px;
+  vertical-align: middle;
+}
+
+.form-div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 12px;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
