@@ -10,6 +10,8 @@ from .views import (
     ServiceOthersView,
     CasesView,
     KoreaCultureArtsTranslationAgencyView,
+    KoreaCultureArtsTranslationAgencyV2View,
+    KoreaCultureArtsTranslationAgencyV3View,
     QuoteRequestView,
     robots_txt,
 )
@@ -38,6 +40,16 @@ urlpatterns = [
         "korea-culture-arts-translation-agency",
         KoreaCultureArtsTranslationAgencyView.as_view(),
         name="korea_culture_arts_translation_agency",
+    ),
+    path(
+        "korea-culture-arts-translation-agency/v2",
+        KoreaCultureArtsTranslationAgencyV2View.as_view(),
+        name="korea_culture_arts_translation_agency_v2",
+    ),
+    path(
+        "korea-culture-arts-translation-agency/v3",
+        KoreaCultureArtsTranslationAgencyV3View.as_view(),
+        name="korea_culture_arts_translation_agency_v3",
     ),
     path("quote-request", QuoteRequestView.as_view(), name="quote_request"),
     path("robots.txt", robots_txt, name="robots_txt"),

@@ -83,6 +83,16 @@ class KoreaCultureArtsTranslationAgencyView(TemplateView):
     http_method_names = ["get"]
 
 
+class KoreaCultureArtsTranslationAgencyV2View(TemplateView):
+    template_name = "core/korea_culture_arts_translation_agency_v2.html"
+    http_method_names = ["get"]
+
+
+class KoreaCultureArtsTranslationAgencyV3View(TemplateView):
+    template_name = "core/korea_culture_arts_translation_agency_v3.html"
+    http_method_names = ["get"]
+
+
 class QuoteRequestView(TemplateView):
     template_name = "core/quote-request.html"
     http_method_names = ["get"]
