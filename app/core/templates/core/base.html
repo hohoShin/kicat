@@ -159,7 +159,7 @@
                     "provider": {
                         "@id": "{{ request.scheme }}://{{ request.get_host }}/#organization"
                     },
-                    "serviceType": ["Policy Report", "ATPE", "AI 문서 PE"],
+                    "serviceType": ["Policy Report", "ATPE", "AI PE"],
                     "areaServed": {
                         "@type": "Country",
                         "name": "대한민국"
@@ -948,7 +948,7 @@
                     <div class="absolute left-0 mt-1 w-48 bg-white shadow-lg rounded-sm border border-gray-100 hidden group-hover:block z-50">
                         <a href="{% url 'core:service_ai' %}#policy-report" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">Policy Report</a>
                         <a href="{% url 'core:service_ai' %}#atpe-service" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">ATPE (AI 번역)</a>
-                        <a href="{% url 'core:service_ai' %}#ai-pe-service" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">AI 문서 PE</a>
+                        <a href="{% url 'core:service_ai' %}#ai-pe-service" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary">AI PE (Editing·감수)</a>
                     </div>
                 </div>
                 <a href="{% url 'core:service_others' %}" class="text-base font-medium text-gray-800 hover:text-primary hover:border-primary transition-all px-2 py-1">

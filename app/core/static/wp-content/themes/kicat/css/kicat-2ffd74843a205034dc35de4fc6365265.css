@@ -887,13 +887,13 @@ li {
 }
 
 .visiton-value {
-  width: 20%;
+  width: auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 10px;
-  border: 2px solid #49afe2;
-  border-radius: 20px;
-  background-color: #f8f8f8;
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
   font-family: Nanumsquareb, sans-serif;
   font-size: 17px;
   text-align: center;
@@ -1017,7 +1017,7 @@ li {
 }
 
 .logos-section {
-  height: 170px;
+  height: auto;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -1114,7 +1114,7 @@ li {
 
 .container-logo {
   display: block;
-  height: 100px;
+  height: auto;
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
