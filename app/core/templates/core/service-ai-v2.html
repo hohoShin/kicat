@@ -104,7 +104,9 @@
         });
         
         // Initial set - Default to first one inactive, will be activated by observer or manual check
-        navLinks.forEach(link => link.classList.add(...inactiveClasses));
+        navLinks.forEach(link => {
+            link.classList.add(...inactiveClasses);
+        });
     });
 </script>
 
@@ -261,95 +263,7 @@
                 </div>
             </div>
 
-            <div id="pe-levels" class="mt-12 pt-10 border-t border-gray-100">
-                <div class="flex flex-col items-center mb-10">
-                    <h3 class="text-2xl font-bold mb-3 text-center">서비스 유형</h3>
-                    <div class="w-16 h-1 bg-primary mb-4"></div>
-                </div>
-                <div class="overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
-                    <table class="w-full border-collapse text-left text-base bg-white">
-                        <thead>
-                            <tr class="bg-gray-50 border-b border-gray-200">
-                                <th class="py-4 px-6 font-bold text-gray-800 w-1/5">구분</th>
-                                <th class="py-4 px-6 font-bold text-gray-800 w-1/4">Level 1. Light PE<br><span class="text-sm text-gray-500 font-normal">기초 교정 단계</span></th>
-                                <th class="py-4 px-6 font-bold text-gray-800 w-1/4 bg-blue-50/30">Level 2. Professional PE<br><span class="text-sm text-gray-500 font-normal">전문가 심화 감수</span></th>
-                                <th class="py-4 px-6 font-bold text-gray-800 w-1/4">Level 3. Premium Rewrite<br><span class="text-sm text-gray-500 font-normal">전략적 리라이팅</span></th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-200">
-                            <tr>
-                                <td class="py-4 px-6 font-bold text-gray-800 bg-gray-50">핵심 목표</td>
-                                <td class="py-4 px-6 text-gray-700">가독성 및 오류 제거</td>
-                                <td class="py-4 px-6 text-gray-700 bg-blue-50/30">전문성 및 학술적 완성도</td>
-                                <td class="py-4 px-6 text-gray-700 font-medium">대외 권위 및 설득력 극대화</td>
-                            </tr>
-                            <tr>
-                                <td class="py-4 px-6 font-bold text-gray-800 bg-gray-50">서비스 상세</td>
-                                <td class="py-4 px-6 text-gray-700 align-top">
-                                    <ul class="space-y-4 text-base list-disc pl-5">
-                                        <li>
-                                            <span class="font-bold text-gray-800">오역 및 미번역 수정</span><br>
-                                            <span class="text-gray-600 text-sm">원문과 대조하여 의미가 왜곡된 부분이나 누락된 문장을 바로잡습니다.</span>
-                                        </li>
-                                        <li>
-                                            <span class="font-bold text-gray-800">기초 문법 교정</span><br>
-                                            <span class="text-gray-600 text-sm">맞춤법, 띄어쓰기, 명백한 비문(Unnatural sentences)을 수정합니다.</span>
-                                        </li>
-                                        <li>
-                                            <span class="font-bold text-gray-800">고유명사 검증</span><br>
-                                            <span class="text-gray-600 text-sm">인명, 지명, 단체명 등 고유명사의 표기 일관성을 체크합니다.</span>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td class="py-4 px-6 text-gray-700 bg-blue-50/30 align-top">
-                                    <ul class="space-y-4 text-base list-disc pl-5">
-                                        <li>
-                                            <span class="font-bold text-gray-800">전공 용어 최적화</span><br>
-                                            <span class="text-gray-600 text-sm">AI가 선택한 일반 단어를 학계나 산업 현장에서 실제로 사용하는 전용 학술 용어로 치환합니다.</span>
-                                        </li>
-                                        <li>
-                                            <span class="font-bold text-gray-800">문체 및 흐름 개선</span><br>
-                                            <span class="text-gray-600 text-sm">AI 특유의 딱딱한 문체를 매끄럽게 다듬고, 논리적 연결어구를 보강하여 읽기 쉬운 전문 보고서로 재구성합니다.</span>
-                                        </li>
-                                        <li>
-                                            <span class="font-bold text-gray-800">가이드라인 준수</span><br>
-                                            <span class="text-gray-600 text-sm">특정 학술지(APA, IEEE 등)나 기관이 요구하는 표기 규칙과 스타일 가이드를 완벽히 적용합니다.</span>
-                                        </li>
-                                    </ul>
-                                </td>
-                                <td class="py-4 px-6 text-gray-700 font-medium align-top">
-                                    <ul class="space-y-4 text-base list-disc pl-5">
-                                        <li>
-                                            <span class="font-bold text-gray-800">원어민 리라이팅</span><br>
-                                            <span class="text-gray-600 text-sm">해당 언어를 모국어로 사용하는 전문가가 문장의 뉘앙스를 미세 조정하여, 번역투가 전혀 없는 자연스럽고 품격 있는 문장을 만듭니다.</span>
-                                        </li>
-                                        <li>
-                                            <span class="font-bold text-gray-800">논리 구조 검토</span><br>
-                                            <span class="text-gray-600 text-sm">전문가의 시각에서 내용 전개의 설득력을 검토하고, 모호한 표현을 명확하게 재번역합니다.</span>
-                                        </li>
-                                        <li>
-                                            <span class="font-bold text-gray-800">최종감수</span><br>
-                                            <span class="text-gray-600 text-sm">각주, 참고문헌, 도표 내 수치 등 아주 미세한 부분까지 인쇄 직전 수준으로 정밀 검수합니다.</span>
-                                        </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="py-4 px-6 font-bold text-gray-800 bg-gray-50">주요 대상</td>
-                                <td class="py-4 px-6 text-gray-700">사내 공유용, 단순 정보 전달</td>
-                                <td class="py-4 px-6 text-gray-700 bg-blue-50/30">전시 및 대외 발간물 등</td>
-                                <td class="py-4 px-6 text-gray-700 font-medium">정부/글로벌 제출, 출판용</td>
-                            </tr>
-                            <tr>
-                                <td class="py-4 px-6 font-bold text-gray-800 bg-gray-50">투입 인력</td>
-                                <td class="py-4 px-6 text-gray-700">일반 번역 전문 에디터</td>
-                                <td class="py-4 px-6 text-gray-700 bg-blue-50/30">분야별 전공 시니어 에디터</td>
-                                <td class="py-4 px-6 text-gray-700 font-medium">석·박사급 + 원어민 에디터</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+
 
         </section>
     </div>
