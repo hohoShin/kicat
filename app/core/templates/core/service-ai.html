@@ -41,19 +41,19 @@
         </h2>
         <div class="w-20 h-1 bg-primary mb-6"></div>
         <p class="text-mutedForeground max-w-2xl mx-auto text-center leading-relaxed">
-            AI 기술이 닿지 못하는 행간까지, 인간의 안목으로 정교하게 다듬습니다.
+            AI 기술이 닿지 못하는 행간까지, 전문가의 안목으로 정교하게 다듬습니다.
         </p>
         </div>
     </div>
 </section>
 
 <!-- Sticky Sub Navigation -->
-<div class="sticky top-[60px] z-40 bg-white/95 backdrop-blur border-b border-gray-200 shadow-sm transition-all duration-300" id="sub-nav-container">
+<div class="sticky top-[65px] z-30 bg-white/95 backdrop-blur border-b border-gray-200 shadow-sm transition-all duration-300" id="sub-nav-container">
     <div class="container mx-auto px-4">
         <div class="sub-nav-links flex overflow-x-auto no-scrollbar justify-start md:justify-center gap-2 md:gap-4 py-3">
-            <a href="#policy-report" class="nav-link whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 border">01 Policy Report</a>
-            <a href="#atpe-service" class="nav-link whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 border">02 ATPE (번역)</a>
-            <a href="#ai-pe-service" class="nav-link whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 border">03 AIPE (감수)</a>
+            <a href="#atpe-service" class="nav-link whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 border">01 ATPE (번역 후 감수)</a>
+            <a href="#ai-pe-service" class="nav-link whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 border">02 AIPE (감수)</a>
+            <a href="#policy-report" class="nav-link whitespace-nowrap px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 border">03 Policy Report</a>
         </div>
     </div>
 </div>
@@ -113,115 +113,28 @@
 <!-- Main Content Wrapper (Gray Background for Card Effect) -->
 <div class="bg-slate-50 py-16">
     <div class="container mx-auto px-4 space-y-16">
-        
-        <!-- Service 01: Policy Report -->
-        <section id="policy-report" class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-12 scroll-mt-36 transition-shadow hover:shadow-md">
-            <div class="flex flex-col gap-12">
-                <div class="text-center max-w-4xl mx-auto">
-                    <div class="mb-8 border-b border-gray-200 pb-6 inline-block">
-                        <span class="inline-block bg-primary/10 text-primary font-bold text-lg px-3 py-1 rounded-lg mb-3">01</span>
-                        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">Policy Report <br/>생성형 AI</h2>
-                    </div>
-                    <h3 class="text-2xl md:text-3xl font-bold leading-tight mb-6 text-gray-800">
-                        리서치와 요약의 번거로움을 해결하고,<br/>인사이트에만 집중하실 수 있도록 지원합니다.
-                    </h3>
-                    <p class="text-lg text-mutedForeground leading-relaxed mb-8">
-                        한국통번역주식회사는 다국어 자료 해석의 전문성과 최신 AI 기술을 결합하여,
-                        고객이 필요로 하는 조사와 더불어 맞춤형 리포트를 제작해 드립니다.
-                    </p>
-                </div>
-
-                <div class="relative h-[320px] md:h-[600px] w-full rounded-2xl overflow-hidden shadow-inner bg-gray-50 flex flex-col items-center justify-center p-8 border border-gray-100">
-                    <span class="inline-flex items-center rounded-full bg-white px-4 py-1.5 text-xs font-bold text-secondary shadow-sm mb-4 text-center border border-gray-100">
-                        Deep Read 2.0 · Expert ATPE 활용
-                    </span>
-                    <img src="{% static 'img/deep_read.jpg' %}" alt="Deep Read 2.0" class="h-full object-contain transform transition-transform duration-500 hover:scale-105 drop-shadow-xl hover:drop-shadow-2xl" />
-                </div>
-
-                <div class="max-w-4xl mx-auto w-full bg-gray-50 p-8 rounded-xl border border-gray-100">
-                    <h4 class="text-lg font-bold mb-6 flex items-center justify-center gap-2">
-                        <i data-lucide="layers" class="h-5 w-5 text-primary"></i>
-                        서비스 유형
-                    </h4>
-                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="h-5 w-5 text-primary mt-0.5 flex-shrink-0"></i>
-                            <span class="text-gray-700 text-left">
-                                <strong class="text-gray-900">Multi-Source Synthesis:</strong><br>
-                                여러 개의 외국어 기사, 자료, 논문 등을 통합하여 하나의 주제별 보고서로 재구성합니다.
-                            </span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <i data-lucide="check-circle" class="h-5 w-5 text-primary mt-0.5 flex-shrink-0"></i>
-                            <span class="text-gray-700 text-left">
-                                <strong class="text-gray-900">Customized Structure:</strong><br>
-                                고객이 원하는 목차 구성(Executive Summary, 핵심 쟁점, 시사점 등)에 맞춰 리포트를 생성합니다.
-                            </span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div id="ai-process" class="mt-16 pt-10 border-t border-gray-100">
-                <div class="flex flex-col items-center mb-10">
-                    <h4 class="text-2xl font-bold mb-3 text-center">서비스 단계</h4>
-                    <div class="w-16 h-1 bg-primary mb-4"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                    <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl border border-gray-100 hover:border-primary/30 transition-colors group">
-                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-4 text-primary shadow-sm group-hover:scale-110 transition-transform">
-                            <i data-lucide="file-up" class="h-6 w-6"></i>
-                        </div>
-                        <h3 class="font-bold mb-2">자료 접수</h3>
-                        <p class="text-sm text-mutedForeground">분석이 필요한 원문 자료(PDF, 웹 링크, 영상 등)와 보고서 목적 전달.</p>
-                    </div>
-                    <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl border border-gray-100 hover:border-primary/30 transition-colors group">
-                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-4 text-primary shadow-sm group-hover:scale-110 transition-transform">
-                            <i data-lucide="cpu" class="h-6 w-6"></i>
-                        </div>
-                        <h3 class="font-bold mb-2">AI 분석 및 구조화</h3>
-                        <p class="text-sm text-mutedForeground">AI 모델을 활용하여 핵심 키워드 추출 및 리포트 개요(Outline) 생성.</p>
-                    </div>
-                    <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl border border-gray-100 hover:border-primary/30 transition-colors group">
-                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-4 text-primary shadow-sm group-hover:scale-110 transition-transform">
-                            <i data-lucide="user-check" class="h-6 w-6"></i>
-                        </div>
-                        <h3 class="font-bold mb-2">전문가 리라이팅</h3>
-                        <p class="text-sm text-mutedForeground">에이전시 소속 전공자가 AI 초안을 바탕으로 논리적 흐름을 보정하고 가독성 높은 문장으로 재작성.</p>
-                    </div>
-                    <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl border border-gray-100 hover:border-primary/30 transition-colors group">
-                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-4 text-primary shadow-sm group-hover:scale-110 transition-transform">
-                            <i data-lucide="check-circle-2" class="h-6 w-6"></i>
-                        </div>
-                        <h3 class="font-bold mb-2">최종 검수 / ATPE</h3>
-                        <p class="text-sm text-mutedForeground">데이터 오기 확인 및 클라이언트 맞춤형 포맷팅 적용 후 납품.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Service 02: ATPE -->
+        <!-- Service 01: ATPE -->
         <section id="atpe-service" class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-12 scroll-mt-36 transition-shadow hover:shadow-md">
             <div class="flex flex-col gap-12">
                 <div class="text-center max-w-4xl mx-auto">
                     <div class="mb-8 border-b border-gray-200 pb-6 inline-block">
-                        <span class="inline-block bg-primary/10 text-primary font-bold text-lg px-3 py-1 rounded-lg mb-3">02</span>
-                        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">ATPE</h2>
-                        <p class="text-xl text-gray-500 mt-2 font-medium">AI Translation Post Editing</p>
+                        <span class="inline-block bg-primary/10 text-primary font-bold text-lg px-3 py-1 rounded-lg mb-3">01</span>
+                        <h2 class="text-3xl font-bold text-gray-900 tracking-tight">ATPE</h2>
+                        <p class="text-lg text-gray-500 mt-2 font-medium">AI Translation Post Editing</p>
                     </div>
-                    <h3 class="text-2xl md:text-3xl font-bold mb-5 text-gray-800 leading-snug">보다 정교한 인공지능 번역과 전문 에디터의 감수를 통해<br/>온전한 번역을 경험하세요.</h3>
-                    <p class="text-lg text-mutedForeground leading-relaxed mb-6">
-                        ATPE는 한국통번역주식회사만의 '인공지능 번역-전문가 후편집' 프로세스를 의미합니다.<br class="hidden md:block" />
+                    <h3 class="text-lg md:text-xl font-bold mb-5 text-gray-800 leading-snug">보다 정교한 인공지능 번역과 전문 에디터의 감수를 통해<br/>온전한 번역을 경험하세요.</h3>
+                    <p class="text-base text-mutedForeground leading-relaxed mb-6">
+                        ATPE는 한국통번역주식회사만의 <span class="font-bold text-secondary decoration-2 decoration-accent/70">'인공지능 번역-전문가 후편집'</span> 프로세스를 의미합니다.<br class="hidden md:block" />
                         인공지능으로 번역하고 (AI Translation), 한국통번역주식회사의 내부 전문가가 감수하는(Post-Editing) 번역 체계를 말합니다.
                     </p>
                 </div>
 
-                <div class="relative h-[320px] md:h-[600px] w-full rounded-2xl overflow-hidden shadow-inner bg-gray-50 flex items-center justify-center border border-gray-100 p-8">
-                    <img src="{% static 'img/atpe.jpg' %}" alt="ATPE" class="h-full object-contain p-2 transform transition-transform duration-500 hover:scale-105 drop-shadow-xl hover:drop-shadow-2xl" />
+                <div class="relative h-[380px] md:h-[600px] w-full rounded-2xl overflow-hidden shadow-inner bg-gray-50 flex items-center justify-center border border-gray-100 p-0 md:p-8">
+                    <img src="{% static 'img/atpe.jpg' %}" alt="ATPE" class="w-full h-full object-contain md:p-2 transform transition-transform duration-500 hover:scale-105 drop-shadow-xl hover:drop-shadow-2xl" />
                 </div>
 
                 <div class="max-w-4xl mx-auto w-full text-center">
-                    <p class="text-gray-700 leading-relaxed text-sm md:text-base inline-flex items-start gap-2 text-left md:text-center">
+                    <p class="text-gray-700 leading-relaxed text-xs md:text-sm inline-flex items-start gap-2 text-left md:text-center">
                         <span>
                             <i data-lucide="info" class="inline-block w-4 h-4 text-blue-500 mr-1 mb-0.5 relative top-0.5"></i>
                             한국통번역주식회사 ATPE팀은 명확한 품질 평가 기준을 바탕으로, 각각의 언어와 분야에 가장 최적화된 번역 엔진 모델을 찾기 위해 지속적인 테스트를 실시합니다.
@@ -232,29 +145,21 @@
             </div>
         </section>
 
-        <!-- Service 03: AI PE -->
+        <!-- Service 02: AI PE -->
         <section id="ai-pe-service" class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-12 scroll-mt-36 transition-shadow hover:shadow-md">
-            <div class="flex flex-col items-center mb-16">
-                <span class="inline-block bg-primary/10 text-primary font-bold text-lg px-3 py-1 rounded-lg mb-4">03</span>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-center tracking-tight">AIPE</h2>
-                <div class="w-24 h-1.5 bg-gray-100 mb-8 rounded-full"></div>
-                <h3 class="text-3xl font-bold mb-4 text-center text-gray-800 leading-snug">AI의 불확실성을<br class="md:hidden"/> 전문가의 확신으로 바꿔드립니다.</h3>
+            <div class="text-center max-w-4xl mx-auto">
+                <div class="mb-8 border-b border-gray-200 pb-6 inline-block">
+                    <span class="inline-block bg-primary/10 text-primary font-bold text-lg px-3 py-1 rounded-lg mb-3">02</span>
+                    <h2 class="text-3xl font-bold text-gray-900 tracking-tight">AIPE</h2>
+                    <p class="text-lg text-gray-500 mt-2 font-medium">당신의 AI 번역본을 완벽하게, 전문가 교정 서비스</p>
+                </div>
+                <h3 class="text-xl font-bold mb-4 text-center text-gray-800 leading-snug">AI의 불확실성을<br class="md:hidden"/> 전문가의 확신으로 바꿔드립니다.</h3>
             </div>
 
-            <div class="max-w-4xl mx-auto text-lg text-mutedForeground leading-relaxed mb-16 text-center">
-                한국통번역주식회사는 최신 AI 기술의 속도감을 존중하지만, 그 결과물이 갖는 한계를 누구보다 잘 알고 있습니다.<br>
-                AI 번역의 초안을 바탕으로, 해당 분야의 전문가가 직접 개입하여 단순한 문장 교정을 넘어 원문의 뉘앙스를 지켜드립니다.
+            <div class="max-w-4xl mx-auto text-base text-mutedForeground leading-relaxed mb-16 text-center">
+                이미 AI로 번역한 문서가 있다면, 마지막 한 끗은 <span class="font-bold text-secondary decoration-2 decoration-accent/70">AIPE</span>에게 맡기세요.<br>
+                클라이언트의 AI 번역본을 전문가가 정밀 감수하여 정확도와 품격을 더해드립니다.
             </div>
-
-<!--            <div class="max-w-3xl mx-auto mb-10 text-center">-->
-<!--                <div class="inline-block px-6 py-2 bg-gray-100 rounded-full mb-6">-->
-<!--                    <span class="font-bold text-gray-700">핵심 특징</span>-->
-<!--                </div>-->
-<!--                <p class="text-mutedForeground leading-relaxed">-->
-<!--                    AI 기술의 발전에도 불구하고 AI 기반문서의 40~50% 이상은 전문가의 손길과 수정이 필요합니다.-->
-<!--                    이는 단순히 오타를 고치는 ‘교정(proofreading)'을 넘어, AI 특유의 어색한 말투(AI-ish)를 없애고 전문성을 입히는 과정이 핵심입니다.-->
-<!--                </p>-->
-<!--            </div>-->
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
                 <div class="bg-gray-50 border border-gray-100 rounded-xl p-6 text-center hover:bg-white hover:shadow-md transition-all duration-300">
@@ -310,7 +215,7 @@
                                 </div>
                                 <div>
                                     <p class="font-bold text-gray-800">주요 대상</p>
-                                    <p>사내 공유용, 단순 정보 전달</p>
+                                    <p>사내 공유용, 단순 정보 전달 등</p>
                                 </div>
                                 <div>
                                     <p class="font-bold text-gray-800">투입 인력</p>
@@ -342,7 +247,7 @@
                                 </div>
                                 <div>
                                     <p class="font-bold text-gray-800">투입 인력</p>
-                                    <p>분야별 전공 시니어 에디터</p>
+                                    <p>분야별 전공 시니어(원어민) 에디터</p>
                                 </div>
                             </div>
                         </div>
@@ -366,11 +271,11 @@
                                 </div>
                                 <div>
                                     <p class="font-bold text-gray-800">주요 대상</p>
-                                    <p>정부/글로벌 제출, 출판용</p>
+                                    <p>정부/글로벌 제출, 출판용 등</p>
                                 </div>
                                 <div>
                                     <p class="font-bold text-gray-800">투입 인력</p>
-                                    <p>석·박사급 + 원어민 에디터</p>
+                                    <p>분야별 전공 시니어(원어민) 에디터</p>
                                 </div>
                             </div>
                         </div>
@@ -391,7 +296,7 @@
                                 <td class="py-4 px-6 font-bold text-gray-800 bg-gray-50">핵심 목표</td>
                                 <td class="py-4 px-6 text-gray-700 border-l border-gray-200">가독성 및 오류 제거</td>
                                 <td class="py-4 px-6 text-gray-700 bg-blue-50/30 border-l border-gray-200">전문성 및 학술적 완성도</td>
-                                <td class="py-4 px-6 text-gray-700 font-medium border-l border-gray-200">대외 권위 및 설득력 극대화</td>
+                                <td class="py-4 px-6 text-gray-700 border-l border-gray-200">대외 권위 및 설득력 극대화</td>
                             </tr>
                             <tr>
                                 <td class="py-4 px-6 font-bold text-gray-800 bg-gray-50">서비스 상세</td>
@@ -427,7 +332,7 @@
                                         </li>
                                     </ul>
                                 </td>
-                                <td class="py-4 px-6 text-gray-700 font-medium align-top border-l border-gray-200">
+                                <td class="py-4 px-6 text-gray-700 align-top border-l border-gray-200">
                                     <ul class="space-y-4 text-base list-disc pl-5">
                                         <li>
                                             <span class="font-bold text-gray-800">원어민 리라이팅</span><br>
@@ -446,156 +351,103 @@
                             </tr>
                             <tr>
                                 <td class="py-4 px-6 font-bold text-gray-800 bg-gray-50">주요 대상</td>
-                                <td class="py-4 px-6 text-gray-700 border-l border-gray-200">사내 공유용, 단순 정보 전달</td>
+                                <td class="py-4 px-6 text-gray-700 border-l border-gray-200">사내 공유용, 단순 정보 전달 등</td>
                                 <td class="py-4 px-6 text-gray-700 bg-blue-50/30 border-l border-gray-200">전시 및 대외 발간물 등</td>
-                                <td class="py-4 px-6 text-gray-700 font-medium border-l border-gray-200">정부/글로벌 제출, 출판용</td>
+                                <td class="py-4 px-6 text-gray-700 border-l border-gray-200">정부/글로벌 제출, 출판용 등</td>
                             </tr>
                             <tr>
                                 <td class="py-4 px-6 font-bold text-gray-800 bg-gray-50">투입 인력</td>
                                 <td class="py-4 px-6 text-gray-700 border-l border-gray-200">일반 번역 전문 에디터</td>
-                                <td class="py-4 px-6 text-gray-700 bg-blue-50/30 border-l border-gray-200">분야별 전공 시니어 에디터</td>
-                                <td class="py-4 px-6 text-gray-700 font-medium border-l border-gray-200">석·박사급 + 원어민 에디터</td>
+                                <td class="py-4 px-6 text-gray-700 bg-blue-50/30 border-l border-gray-200">분야별 전공 시니어(원어민) 에디터</td>
+                                <td class="py-4 px-6 text-gray-700 border-l border-gray-200">분야별 전공 시니어(원어민) 에디터</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
+        </section>
 
-<!--            <div class="mt-16">-->
-<!--                <div class="flex flex-col items-center mb-8">-->
-<!--                    <h3 class="text-2xl font-bold mb-3 text-center">서비스 상세 소개</h3>-->
-<!--                    <div class="w-16 h-1 bg-primary mb-4"></div>-->
-<!--                    <p class="text-sm text-gray-500 mb-2">각 항목에 마우스를 올리면 상세 내용을 확인하실 수 있습니다.</p>-->
-<!--                </div>-->
-<!--                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">-->
-<!--                    &lt;!&ndash; L1 &ndash;&gt;-->
-<!--                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:border-primary/50 transition-colors shadow-sm relative z-0 hover:z-10">-->
-<!--                        <div class="flex items-baseline gap-2 mb-3 border-b border-gray-100 pb-3">-->
-<!--                            <span class="text-primary font-bold">L1</span>-->
-<!--                            <h3 class="text-xl font-bold">Light PE</h3>-->
-<!--                        </div>-->
-<!--                        <span class="text-xs font-semibold bg-gray-100 px-2 py-1 rounded text-gray-600 mb-3 inline-block">기초 교정 단계</span>-->
-<!--                        <p class="text-gray-700 font-medium mb-4 text-sm leading-relaxed">AI 번역의 치명적인 오류를 제거하여 문서의 기본 가독성을 확보합니다.</p>-->
-<!--                        <ul class="space-y-3 text-sm text-gray-600 mb-4">-->
-<!--                            <li class="relative group cursor-help">-->
-<!--                                <div class="flex items-start gap-2">-->
-<!--                                    <i data-lucide="check" class="w-4 h-4 mt-0.5 text-primary flex-shrink-0"></i>-->
-<!--                                    <span class="font-bold text-gray-800 border-b border-dashed border-gray-300 group-hover:border-primary transition-colors">오역 및 미번역 수정</span>-->
-<!--                                </div>-->
-<!--                                <div class="absolute left-0 bottom-full mb-2 w-64 bg-gray-900 text-white text-xs p-3 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pointer-events-none transform translate-y-2 group-hover:translate-y-0">-->
-<!--                                    원문과 대조하여 의미가 왜곡된 부분이나 누락된 문장을 바로잡습니다.-->
-<!--                                    <div class="absolute bottom-0 left-6 transform translate-y-1/2 rotate-45 w-2 h-2 bg-gray-900"></div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                            <li class="relative group cursor-help">-->
-<!--                                <div class="flex items-start gap-2">-->
-<!--                                    <i data-lucide="check" class="w-4 h-4 mt-0.5 text-primary flex-shrink-0"></i>-->
-<!--                                    <span class="font-bold text-gray-800 border-b border-dashed border-gray-300 group-hover:border-primary transition-colors">기초 문법 교정</span>-->
-<!--                                </div>-->
-<!--                                <div class="absolute left-0 bottom-full mb-2 w-64 bg-gray-900 text-white text-xs p-3 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pointer-events-none transform translate-y-2 group-hover:translate-y-0">-->
-<!--                                    맞춤법, 띄어쓰기, 명백한 비문(Unnatural sentences)을 수정합니다.-->
-<!--                                    <div class="absolute bottom-0 left-6 transform translate-y-1/2 rotate-45 w-2 h-2 bg-gray-900"></div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                            <li class="relative group cursor-help">-->
-<!--                                <div class="flex items-start gap-2">-->
-<!--                                    <i data-lucide="check" class="w-4 h-4 mt-0.5 text-primary flex-shrink-0"></i>-->
-<!--                                    <span class="font-bold text-gray-800 border-b border-dashed border-gray-300 group-hover:border-primary transition-colors">고유명사 검증</span>-->
-<!--                                </div>-->
-<!--                                <div class="absolute left-0 bottom-full mb-2 w-64 bg-gray-900 text-white text-xs p-3 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pointer-events-none transform translate-y-2 group-hover:translate-y-0">-->
-<!--                                    인명, 지명, 단체명 등 고유명사의 표기 일관성을 체크합니다.-->
-<!--                                    <div class="absolute bottom-0 left-6 transform translate-y-1/2 rotate-45 w-2 h-2 bg-gray-900"></div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
+        <!-- Service 03: Policy Report -->
+        <section id="policy-report" class="bg-white rounded-3xl shadow-sm border border-gray-100 p-8 md:p-12 scroll-mt-36 transition-shadow hover:shadow-md">
+            <div class="flex flex-col gap-12">
+                <div class="text-center max-w-4xl mx-auto">
+                    <div class="mb-8 border-b border-gray-200 pb-6 inline-block">
+                        <span class="inline-block bg-primary/10 text-primary font-bold text-lg px-3 py-1 rounded-lg mb-3">03</span>
+                        <h2 class="text-3xl font-bold text-gray-900 tracking-tight">Policy Report <br/>생성형 AI</h2>
+                    </div>
+                    <h3 class="text-xl font-bold leading-tight mb-6 text-gray-800">
+                        리서치와 요약의 번거로움을 해결하고,<br/>인사이트에만 집중하실 수 있도록 지원합니다.
+                    </h3>
+                    <p class="text-base text-mutedForeground leading-relaxed mb-8">
+                        한국통번역주식회사는 다국어 자료 해석의 전문성과 최신 AI 기술을 결합하여,<br>
+                        고객이 필요로 하는 조사와 더불어 맞춤형 리포트를 제작해 드립니다.
+                    </p>
+                </div>
 
-<!--                    &lt;!&ndash; L2 &ndash;&gt;-->
-<!--                    <div class="bg-white p-6 rounded-xl border border-blue-200 ring-1 ring-blue-100 shadow-md relative z-0 hover:z-10">-->
-<!--                        <div class="flex items-baseline gap-2 mb-3 border-b border-gray-100 pb-3">-->
-<!--                            <span class="text-primary font-bold">L2</span>-->
-<!--                            <h3 class="text-xl font-bold">Professional PE</h3>-->
-<!--                        </div>-->
-<!--                        <span class="text-xs font-semibold bg-blue-50 px-2 py-1 rounded text-blue-700 mb-3 inline-block">전문가 심화 감수</span>-->
-<!--                        <p class="text-gray-700 font-medium mb-4 text-sm leading-relaxed">해당 분야의 전공 지식을 바탕으로 보고서의 전문적 가치를 구현합니다.</p>-->
-<!--                        <ul class="space-y-3 text-sm text-gray-600 mb-4">-->
-<!--                            <li class="relative group cursor-help">-->
-<!--                                <div class="flex items-start gap-2">-->
-<!--                                    <i data-lucide="check" class="w-4 h-4 mt-0.5 text-primary flex-shrink-0"></i>-->
-<!--                                    <span class="font-bold text-gray-800 border-b border-dashed border-gray-300 group-hover:border-primary transition-colors">전공 용어 최적화</span>-->
-<!--                                </div>-->
-<!--                                <div class="absolute left-0 bottom-full mb-2 w-64 bg-gray-900 text-white text-xs p-3 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pointer-events-none transform translate-y-2 group-hover:translate-y-0">-->
-<!--                                    AI가 선택한 일반 단어를 학계나 산업 현장에서 실제로 사용하는 전용 학술 용어로 치환합니다.-->
-<!--                                    <div class="absolute bottom-0 left-6 transform translate-y-1/2 rotate-45 w-2 h-2 bg-gray-900"></div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                            <li class="relative group cursor-help">-->
-<!--                                <div class="flex items-start gap-2">-->
-<!--                                    <i data-lucide="check" class="w-4 h-4 mt-0.5 text-primary flex-shrink-0"></i>-->
-<!--                                    <span class="font-bold text-gray-800 border-b border-dashed border-gray-300 group-hover:border-primary transition-colors">문체 및 흐름 개선</span>-->
-<!--                                </div>-->
-<!--                                <div class="absolute left-0 bottom-full mb-2 w-64 bg-gray-900 text-white text-xs p-3 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pointer-events-none transform translate-y-2 group-hover:translate-y-0">-->
-<!--                                    AI 특유의 딱딱한 문체를 매끄럽게 다듬고, 논리적 연결어구를 보강하여 읽기 쉬운 전문 보고서로 재구성합니다.-->
-<!--                                    <div class="absolute bottom-0 left-6 transform translate-y-1/2 rotate-45 w-2 h-2 bg-gray-900"></div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                            <li class="relative group cursor-help">-->
-<!--                                <div class="flex items-start gap-2">-->
-<!--                                    <i data-lucide="check" class="w-4 h-4 mt-0.5 text-primary flex-shrink-0"></i>-->
-<!--                                    <span class="font-bold text-gray-800 border-b border-dashed border-gray-300 group-hover:border-primary transition-colors">가이드라인 준수</span>-->
-<!--                                </div>-->
-<!--                                <div class="absolute left-0 bottom-full mb-2 w-64 bg-gray-900 text-white text-xs p-3 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pointer-events-none transform translate-y-2 group-hover:translate-y-0">-->
-<!--                                    특정 학술지(APA, IEEE 등)나 기관이 요구하는 표기 규칙과 스타일 가이드를 완벽히 적용합니다.-->
-<!--                                    <div class="absolute bottom-0 left-6 transform translate-y-1/2 rotate-45 w-2 h-2 bg-gray-900"></div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
+                <div class="relative h-[380px] md:h-[600px] w-full rounded-2xl overflow-hidden shadow-inner bg-gray-50 flex flex-col items-center justify-center p-0 md:p-8 border border-gray-100">
+                    <img src="{% static 'img/deep_read.jpg' %}" alt="Deep Read 2.0" class="w-full h-full object-contain md:p-2 transform transition-transform duration-500 hover:scale-105 drop-shadow-xl hover:drop-shadow-2xl" />
+                </div>
 
-<!--                    &lt;!&ndash; L3 &ndash;&gt;-->
-<!--                    <div class="bg-white p-6 rounded-xl border border-gray-200 hover:border-primary/50 transition-colors shadow-sm relative z-0 hover:z-10">-->
-<!--                        <div class="flex items-baseline gap-2 mb-3 border-b border-gray-100 pb-3">-->
-<!--                            <span class="text-primary font-bold">L3</span>-->
-<!--                            <h3 class="text-xl font-bold">Premium Rewrite</h3>-->
-<!--                        </div>-->
-<!--                        <span class="text-xs font-semibold bg-gray-100 px-2 py-1 rounded text-gray-600 mb-3 inline-block">전략적 리라이팅</span>-->
-<!--                        <p class="text-gray-700 font-medium mb-4 text-sm leading-relaxed">단순 감수를 넘어 원어민 수준의 품격과 전문적 권위를 완성합니다.</p>-->
-<!--                        <ul class="space-y-3 text-sm text-gray-600 mb-4">-->
-<!--                            <li class="relative group cursor-help">-->
-<!--                                <div class="flex items-start gap-2">-->
-<!--                                    <i data-lucide="check" class="w-4 h-4 mt-0.5 text-primary flex-shrink-0"></i>-->
-<!--                                    <span class="font-bold text-gray-800 border-b border-dashed border-gray-300 group-hover:border-primary transition-colors">원어민 리라이팅</span>-->
-<!--                                </div>-->
-<!--                                <div class="absolute right-0 bottom-full mb-2 w-64 bg-gray-900 text-white text-xs p-3 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pointer-events-none transform translate-y-2 group-hover:translate-y-0">-->
-<!--                                    해당 언어를 모국어로 사용하는 전문가가 문장의 뉘앙스를 미세 조정하여, 번역투가 전혀 없는 자연스럽고 품격 있는 문장을 만듭니다.-->
-<!--                                    <div class="absolute bottom-0 right-6 transform translate-y-1/2 rotate-45 w-2 h-2 bg-gray-900"></div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                            <li class="relative group cursor-help">-->
-<!--                                <div class="flex items-start gap-2">-->
-<!--                                    <i data-lucide="check" class="w-4 h-4 mt-0.5 text-primary flex-shrink-0"></i>-->
-<!--                                    <span class="font-bold text-gray-800 border-b border-dashed border-gray-300 group-hover:border-primary transition-colors">논리 구조 검토</span>-->
-<!--                                </div>-->
-<!--                                <div class="absolute right-0 bottom-full mb-2 w-64 bg-gray-900 text-white text-xs p-3 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pointer-events-none transform translate-y-2 group-hover:translate-y-0">-->
-<!--                                    전문가의 시각에서 내용 전개의 설득력을 검토하고, 모호한 표현을 명확하게 재번역합니다.-->
-<!--                                    <div class="absolute bottom-0 right-6 transform translate-y-1/2 rotate-45 w-2 h-2 bg-gray-900"></div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                            <li class="relative group cursor-help">-->
-<!--                                <div class="flex items-start gap-2">-->
-<!--                                    <i data-lucide="check" class="w-4 h-4 mt-0.5 text-primary flex-shrink-0"></i>-->
-<!--                                    <span class="font-bold text-gray-800 border-b border-dashed border-gray-300 group-hover:border-primary transition-colors">최종감수</span>-->
-<!--                                </div>-->
-<!--                                <div class="absolute right-0 bottom-full mb-2 w-64 bg-gray-900 text-white text-xs p-3 rounded shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50 pointer-events-none transform translate-y-2 group-hover:translate-y-0">-->
-<!--                                    각주, 참고문헌, 도표 내 수치 등 아주 미세한 부분까지 인쇄 직전 수준으로 정밀 검수합니다.-->
-<!--                                    <div class="absolute bottom-0 right-6 transform translate-y-1/2 rotate-45 w-2 h-2 bg-gray-900"></div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
+                <div class="max-w-4xl mx-auto w-full bg-gray-50 p-8 rounded-xl border border-gray-100">
+                    <h4 class="text-lg font-bold mb-6 flex items-center justify-center gap-2">
+                        <i data-lucide="layers" class="h-5 w-5 text-primary"></i>
+                        서비스 유형
+                    </h4>
+                    <ul class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="h-5 w-5 text-primary mt-0.5 flex-shrink-0"></i>
+                            <span class="text-gray-700 text-left">
+                                <strong class="text-gray-900">Multi-Source Synthesis:</strong><br>
+                                여러 개의 외국어 기사, 자료, 논문 등을 통합하여 하나의 주제별 보고서로 재구성합니다.
+                            </span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="check-circle" class="h-5 w-5 text-primary mt-0.5 flex-shrink-0"></i>
+                            <span class="text-gray-700 text-left">
+                                <strong class="text-gray-900">Customized Structure:</strong><br>
+                                고객이 원하는 목차 구성(Executive Summary, 핵심 쟁점, 시사점 등)에 맞춰 리포트를 생성합니다.
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
+            <div id="ai-process" class="mt-16 pt-10 border-t border-gray-100">
+                <div class="flex flex-col items-center mb-10">
+                    <h4 class="text-2xl font-bold mb-3 text-center">서비스 단계</h4>
+                    <div class="w-16 h-1 bg-primary mb-4"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl border border-gray-100 hover:border-primary/30 transition-colors group">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-4 text-primary shadow-sm group-hover:scale-110 transition-transform">
+                            <i data-lucide="file-up" class="h-6 w-6"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">자료 접수</h3>
+                        <p class="text-sm text-mutedForeground">분석이 필요한 원문 자료(PDF, 웹 링크, 영상 등)와 보고서 목적 전달</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl border border-gray-100 hover:border-primary/30 transition-colors group">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-4 text-primary shadow-sm group-hover:scale-110 transition-transform">
+                            <i data-lucide="cpu" class="h-6 w-6"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">AI 분석 및 구조화</h3>
+                        <p class="text-sm text-mutedForeground">AI 모델을 활용하여 핵심 키워드 추출 및 리포트 개요(Outline) 생성</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl border border-gray-100 hover:border-primary/30 transition-colors group">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-4 text-primary shadow-sm group-hover:scale-110 transition-transform">
+                            <i data-lucide="user-check" class="h-6 w-6"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">전문가 리라이팅</h3>
+                        <p class="text-sm text-mutedForeground">에이전시 소속 전공자가 AI 초안을 바탕으로 논리적 흐름을 보정하고 가독성 높은 문장으로 재작성</p>
+                    </div>
+                    <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-xl border border-gray-100 hover:border-primary/30 transition-colors group">
+                        <div class="w-14 h-14 bg-white rounded-full flex items-center justify-center mb-4 text-primary shadow-sm group-hover:scale-110 transition-transform">
+                            <i data-lucide="check-circle-2" class="h-6 w-6"></i>
+                        </div>
+                        <h3 class="font-bold mb-2">최종 검수 / ATPE</h3>
+                        <p class="text-sm text-mutedForeground">데이터 오기 확인 및 클라이언트 맞춤형 포맷팅 적용 후 납품</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 </div>
